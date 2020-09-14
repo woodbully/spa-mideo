@@ -163,20 +163,7 @@ async function appendFavMovies(favMovieIds = []) {
   document.querySelector('#saved-vid-container').innerHTML = htmlTemplate;
 }
 
-// adds a given movieId to the favMovies array inside _currentUser
-function addToFavourites(movieId) {
-  showLoader(true);
-  _userRef.doc(_currentUser.uid).set({
-    favMovies: firebase.firestore.FieldValue.arrayUnion(movieId)
-  }, {
-    merge: true
-  });
-}
-
-// removes a given movieId to the favMovies array inside _currentUser
-function removeFromFavourites(movieId) {
-  showLoader(true);
-  _userRef.doc(_currentUser.uid).update({
-    favMovies: firebase.firestore.FieldValue.arrayRemove(movieId)
-  });
-}
+// Loader hide
+$(window).on("load", function () {
+  $(".loader-wrapper").fadeOut("slow");
+});

@@ -20,13 +20,39 @@
   </nav>
 
   <!-- pages -->
-  <!-- home page -->
+
+  <!--Welcome Page-->
+  <section id="welcome">
+    <div id="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+  </section>
+
+  <!-- Home page -->
+
   <section id="home" class="page">
     <header class="topbar">
       <h2>Mideo</h2>
       <a class="right" href="#" onclick="logout()">Logout</a>
     </header>
-    <div id="movie-container" class="grid-container"></div>
+    <div id="video-container" class="grid-container">
+      <video id="video" controls>
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div id="video-controls">Video Controls Back Pause Next</div>
+    </div>
+    <div id="category-slidebar">
+      <ul>
+        <li>Cats</li>
+        <li>Cats</li>
+        <li>Cats</li>
+        <li>Cats</li>
+      </ul>
+    </div>
+    <div id="spin-wheel">
+      Spin the Wheel
+    </div>
   </section>
 
   <!-- Saved page -->
@@ -34,9 +60,15 @@
     <header class="topbar">
       <h2>Saved</h2>
       <a class="left" href="#home" onclick="">Home</a>
-
     </header>
-    <div id="saved-vid-container" class="grid-container"></div>
+
+    <div id="saved-vid-container">
+      <div id="saved-wrapper">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
 
   </section>
 
@@ -53,17 +85,12 @@
 
   <!-- Login page -->
   <section id="login" class="page">
-    <header class="topbar">
-      <h2>Login</h2>
-    </header>
+
     <!-- firebase auth container  -->
     <section id="firebaseui-auth-container"></section>
   </section>
 
-  <!-- loader  -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
+
   <!-- Firebase App SDKs -->
   <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>

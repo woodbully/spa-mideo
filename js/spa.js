@@ -44,11 +44,3 @@ function pageChange() {
 
 pageChange(); // called by default when the app is loaded for the first time
 
-function showLoader(show) {
-  let loader = document.querySelector('#loader');
-  if (show) {
-    loader.classList.remove("hide");
-  } else {
-    loader.classList.add("hide");
-  }
-}
