@@ -3,13 +3,14 @@
 // ========== GLOBAL FIREBASE CONFIG ========== //
 // Your web app's Firebase configuration
 const _firebaseConfig = {
-  apiKey: "AIzaSyCMyBxTqrwDePj6kSVgD5rVsEQ-66FCoCk",
-  authDomain: "mdu-e18front.firebaseapp.com",
-  databaseURL: "https://mdu-e18front.firebaseio.com",
-  projectId: "mdu-e18front",
-  storageBucket: "mdu-e18front.appspot.com",
-  messagingSenderId: "1065294705229",
-  appId: "1:1065294705229:web:81f00c89d44d800c75e204"
+  apiKey: "AIzaSyAN2bXuS4IFALz24glQ1fG54T3IdfXrJ0E",
+  authDomain: "mideo-cb05e.firebaseapp.com",
+  databaseURL: "https://mideo-cb05e.firebaseio.com",
+  projectId: "mideo-cb05e",
+  storageBucket: "mideo-cb05e.appspot.com",
+  messagingSenderId: "101809349141",
+  appId: "1:101809349141:web:2f608f2b96ed7ad48a641c",
+  measurementId: "G-FKPWJZB2DZ"
 };
 // Initialize Firebase and database references
 firebase.initializeApp(_firebaseConfig);

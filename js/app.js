@@ -63,34 +63,10 @@ function logout() {
   document.querySelector('#imagePreview').src = "";
 }
 
-// ========== PROFILE PAGE FUNCTIONALITY ========== //
-// append user data to profile page
-function appendUserData() {
-  document.querySelector('#name').value = _currentUser.displayName;
-  document.querySelector('#mail').value = _currentUser.email;
-  document.querySelector('#birthdate').value = _currentUser.birthdate;
-  document.querySelector('#hairColor').value = _currentUser.hairColor;
-  document.querySelector('#imagePreview').src = _currentUser.img;
-}
+// ========== Filters page ========== //
 
-// update user data - auth user and database object
-function updateUser() {
-  let user = firebase.auth().currentUser;
 
-  // update auth user
-  user.updateProfile({
-    displayName: document.querySelector('#name').value
-  });
 
-  // update database user
-  _userRef.doc(_currentUser.uid).set({
-    img: document.querySelector('#imagePreview').src,
-    birthdate: document.querySelector('#birthdate').value,
-    hairColor: document.querySelector('#hairColor').value
-  }, {
-    merge: true
-  });
-}
 
 // ========== Prieview image function ========== //
 function previewImage(file, previewId) {
@@ -184,7 +160,7 @@ async function appendFavMovies(favMovieIds = []) {
       });
     }
   }
-  document.querySelector('#fav-movie-container').innerHTML = htmlTemplate;
+  document.querySelector('#saved-vid-container').innerHTML = htmlTemplate;
 }
 
 // adds a given movieId to the favMovies array inside _currentUser
