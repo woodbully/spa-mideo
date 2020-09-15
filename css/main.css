@@ -121,6 +121,7 @@ h1 {
   left:0;
   background: linear-gradient(to bottom right, #cc00ff 0%, #009999 100%);
   z-index: 1;
+  display: none;
 
 }
 
