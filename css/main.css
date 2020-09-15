@@ -158,6 +158,30 @@ h1 {
   width: 100%;
 }
 
+
+/* ------ Filters / Category -----*/
+#filters-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin:0;
+}
+#filters-wrap ul {
+  width: 100%;
+  margin: 0;
+padding: 0;
+
+}
+#filters-wrap li {
+  width:30%;
+  background-color:red;
+  list-style: none;
+  padding: 0 5 0 5;
+  margin:0;
+  display: inline;
+}
+
 /* ---------- logo styling ---------- */
 .logo {
   margin: 2em auto;
