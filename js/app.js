@@ -162,7 +162,3 @@ async function appendFavMovies(favMovieIds = []) {
   document.querySelector('#saved-vid-container').innerHTML = htmlTemplate;
 }
 
-// Loader hide
-$(window).on("load", function () {
-  $(".loader-wrapper").fadeOut("slow");
-});
